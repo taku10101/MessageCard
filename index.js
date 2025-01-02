@@ -27,13 +27,7 @@ function typeLetter() {
     letterElement.innerHTML += Letter[index];
     index++;
 
-    // Gradually shrink the font size as the content grows
-    if (index > Letter.length * 0.3) {
-      fontSize -= 0.002; // Shrink rate (adjust for smoother transition)
-      letterElement.style.fontSize = `${Math.max(fontSize, 1)}rem`; // Prevent shrinking below 1rem
-    }
-
-    setTimeout(typeLetter, 50); // Typing speed
+    setTimeout(typeLetter, 80); // Typing speed
   }
 }
 
@@ -47,7 +41,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 function drawStars() {
-  const numStars = 200; // Number of stars
+  const numStars = 500; // Number of stars
   for (let i = 0; i < numStars; i++) {
     const x = Math.random() * canvas.width;
     const y = Math.random() * canvas.height;
