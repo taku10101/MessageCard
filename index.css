@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  background: radial-gradient(
+    circle,
+    #0d1b2a,
+    #1b263b,
+    #415a77
+  ); /* Cosmic gradient */
+  font-family: "Dancing Script", cursive; /* Romantic font */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind the content */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  overflow: hidden;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent container */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.letter {
+  font-size: 1.8rem; /* Start with a larger font size */
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif; /* Clean and readable font */
+  color: #ffffff; /* White font to contrast with the background */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: left;
+  transition: font-size 0.2s ease-in-out; /* Smooth shrinking effect */
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%; /* Expand width for smaller devices */
+    padding: 15px;
+  }
+
+  .letter {
+    font-size: 1.2rem; /* Reduce font size for readability */
+    line-height: 1.4;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 10px; /* Minimal padding for very small screens */
+  }
+
+  .letter {
+    font-size: 1rem; /* Even smaller font size for compact screens */
+    line-height: 1.3;
+  }
+}
