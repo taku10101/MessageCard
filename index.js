@@ -65,9 +65,12 @@ function twinkleStars() {
 
 setInterval(twinkleStars, 1000); // Stars "twinkle" every second
 
-// Resize canvas on window resize
-window.addEventListener("resize", () => {
+// Resize canvas on window resize and initial load
+function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  drawStars();
-});
+  drawStars(); // Redraw stars to fit new dimensions
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas(); // Call resizeCanvas on initial load to ensure correct sizing
